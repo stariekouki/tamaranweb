@@ -1948,14 +1948,14 @@
             滝谷不動<br>
             『居酒屋　たかはし』
           </p>
-          <div class="news-thumb" style="background-image:url('1011.jpg'); background-size:contain; background-repeat:no-repeat; height:auto; aspect-ratio:1076/1522;"></div>
+          <img class="news-thumb" src="1011.jpg" alt="10月11日 LIVE告知" style="width:100%; height:auto; display:block; object-fit:contain;">
           <br>
           <p>
             ✦ DAY 2✦<br>
             10月12日(月) 祝日<br>
             滝谷　気まぐれハート
           </p>
-          <div class="news-thumb" style="background-image:url('1012.jpg'); background-size:contain; background-repeat:no-repeat; height:auto; aspect-ratio:960/1706;"></div>
+          <img class="news-thumb" src="1012.jpg" alt="10月12日 LIVE告知" style="width:100%; height:auto; display:block; object-fit:contain;">
         </div>
       </div>
     </div>
@@ -2149,6 +2149,7 @@
 (function(){
   var lb=document.getElementById('lightbox'), lbImg=document.getElementById('lightbox-img');
   function bgUrl(el){
+    if (el.tagName === 'IMG') return el.currentSrc || el.src;
     var bg=el.style.backgroundImage||getComputedStyle(el).backgroundImage;
     var m=bg&&bg.match(/url\(["']?(.*?)["']?\)/);
     return m?m[1]:null;
